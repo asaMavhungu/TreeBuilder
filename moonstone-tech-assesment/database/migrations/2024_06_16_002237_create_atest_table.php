@@ -35,7 +35,7 @@ return new class extends Migration
         Schema::dropIfExists('atest');
     }
 
-    // Todo: implement the 'insertData()' function and perform migration
+    // implemented the 'insertData()' function and performed migration
     private function insertData()
     {
         $data = [
