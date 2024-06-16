@@ -11,10 +11,6 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('atest', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
 
         Schema::create('atest', function (Blueprint $table) {
             $table->integer('id')->primary();
