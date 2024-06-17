@@ -6,6 +6,13 @@
 
     <style>
 
+        .caret {
+            display: block;
+            padding: 5px;
+            border: 1px solid;
+            cursor: pointer;
+        }
+
         /* if the item is nested, dont dispay it */
         .nested {
             display: none;
