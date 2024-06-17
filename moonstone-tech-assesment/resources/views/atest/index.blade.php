@@ -7,7 +7,7 @@
 </head>
 <body>
     <ul id="menu">
-        // $tree is passed down from AtestController
+        <!-- $tree is passed down from AtestController --> 
         @foreach ($tree as $item)
             @include('atest.dropdown-item', ['item' => $item])
         @endforeach
@@ -18,7 +18,10 @@
             const togglers = document.querySelectorAll('.caret');
             togglers.forEach(toggler => {
                 toggler.addEventListener('click', function () {
+                    // toggle the selected item's 'active' status
                     this.parentElement.querySelector(".nested").classList.toggle("active");
+                    // toggle the selected item's 'caret-down' status
+                    // to show is as a sub-element 
                     this.classList.toggle("caret-down");
                 });
             });
