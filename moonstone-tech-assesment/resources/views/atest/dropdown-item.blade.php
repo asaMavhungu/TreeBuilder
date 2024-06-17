@@ -1,5 +1,9 @@
 <li>
-    <span class="caret">{{ $item->name }}</span>
+    @if (isset($item->children) && count($item->children) > 0)
+        <span class="caret parent">{{ $item->name }}</span>
+    @else
+        <span class="caret">{{ $item->name }}</span>
+    @endif
     <!-- if item->children is a set, include the nested list --> 
     @if (isset($item->children))
         <ul class="nested">
