@@ -1,4 +1,5 @@
 <li>
+    <!--  if the item has children, also give it the 'parent' class -->
     @if (isset($item->children) && count($item->children) > 0)
         <span class="caret parent">{{ $item->name }}</span>
     @else

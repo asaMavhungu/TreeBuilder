@@ -6,10 +6,12 @@
 
     <style>
 
+        /* remove the bullet points */
         ul {
             list-style-type: none;
         }
 
+        /* add border and change cursor on hover */
         .caret {
             display: block;
             padding: 5px;
@@ -17,11 +19,16 @@
             cursor: pointer;
         }
 
+        /* add a '+' symbol to show item can expand */
         .caret.parent::before {
             content: '+';
             padding: 0 5px;
         }
 
+        /* add a '-' symbol to show item has been expanded
+           NB: if item is just caret, it has no children and has no
+                expand or contrast sybmol
+        */
         .caret.parent.caret-down::before {
             content: '-';
             padding: 0 5px;
