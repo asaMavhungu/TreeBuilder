@@ -6,6 +6,10 @@
 
     <style>
 
+        ul {
+            list-style-type: none;
+        }
+
         .caret {
             display: block;
             padding: 5px;
