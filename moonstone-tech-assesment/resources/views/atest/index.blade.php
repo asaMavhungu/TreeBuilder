@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<htm lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <style>
+
+        /* if the item is nested, dont dispay it */
+        .nested {
+            display: none;
+        }
+        
+        /* if the hidden nestest item becomes active, then display it*/
+        .active {
+            display: block;
+        }
+
+    </style>
+
+
 </head>
+
+
 <body>
     <ul id="menu">
         <!-- $tree is passed down from AtestController --> 
