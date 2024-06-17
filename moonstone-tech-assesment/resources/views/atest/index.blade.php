@@ -17,18 +17,15 @@
             cursor: pointer;
         }
 
-        .caret::before {
+        .caret.parent::before {
             content: '+';
             padding: 0 5px;
         }
 
-        .caret.caret-down::before {
+        .caret.parent.caret-down::before {
             content: '-';
             padding: 0 5px;
         }
-
-
-        
 
         /* if the item is nested, dont dispay it */
         .nested {
