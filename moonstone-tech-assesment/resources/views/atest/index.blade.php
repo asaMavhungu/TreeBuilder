@@ -20,8 +20,15 @@
         .caret::before {
             content: '+';
             padding: 0 5px;
-
         }
+
+        .caret.caret-down::before {
+            content: '-';
+            padding: 0 5px;
+        }
+
+
+        
 
         /* if the item is nested, dont dispay it */
         .nested {
