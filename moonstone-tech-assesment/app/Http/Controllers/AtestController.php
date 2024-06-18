@@ -57,7 +57,8 @@ class AtestController extends Controller
                 }
                 else
                 {
-                    $tree->push($currentItem); // no parent means this is a root node
+                    if (!$visitetedItems->contains($currentItem->id))
+                        $tree->push($currentItem); // no parent means this is a root node
                     break; // move to the next filteredIten
                 }
             }
