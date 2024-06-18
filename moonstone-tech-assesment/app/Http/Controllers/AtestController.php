@@ -17,7 +17,6 @@ class AtestController extends Controller
         //$tree = $this->buildTree($items);
         $tree = $this->filterTree( $items, $query );
         $tree = $this->buildTree($tree);
-        $tree = $this->buildTree($items);
 
         // pass the tree structure to the 'atest.index' view
         // the tree structure will be refered to as 'tree' in the view
