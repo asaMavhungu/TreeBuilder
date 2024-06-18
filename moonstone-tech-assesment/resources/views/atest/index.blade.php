@@ -51,6 +51,9 @@
 
 
 <body>
+
+    @include('atest.search-bar')
+    
     <ul id="menu">
         <!-- $tree is passed down from AtestController --> 
         @foreach ($tree as $item)
