@@ -39,6 +39,8 @@ class AtestController extends Controller
         {
             $currentItem = $item;
 
+            $tree->push($currentItem);
+
 
             while ($currentItem)
             {
