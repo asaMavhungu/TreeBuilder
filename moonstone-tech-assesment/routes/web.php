@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/atest', [AtestController::class, 'index']);
-Route::get('/search', [AtestController::class, 'index'])->name('items.search');
+Route::get('/atest', [AtestController::class, 'index'])->name('atest.index');
+Route::get('/search', [AtestController::class, 'index'])->name('atest.search');
