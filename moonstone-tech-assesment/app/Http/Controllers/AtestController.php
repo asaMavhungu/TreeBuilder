@@ -4,19 +4,24 @@
 namespace App\Http\Controllers;
 
 use App\Models\Atest;
-
+use Illuminate\Http\Request;
 
 class AtestController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $items = Atest::all();
 
-        $query = "clear";
+        $query = $request->input("query");
 
-        //$tree = $this->buildTree($items);
-        $tree = $this->filterTree( $items, $query );
-        $tree = $this->buildTree($tree);
+        if($query)
+        {
+            $tree = $this->filterTree( $items, $query );
+            $tree = $this->buildTree($tree);
+            return view('atest.index', compact('tree')); 
+        }
+        
+        $tree = $this->buildTree($items);
 
         // pass the tree structure to the 'atest.index' view
         // the tree structure will be refered to as 'tree' in the view
