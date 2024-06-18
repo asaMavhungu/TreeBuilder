@@ -17,10 +17,8 @@ class AtestController extends Controller
         if($query)
         {
             $tree = $this->filterTree( $items, $query );
-            dump(gettype($tree));
             $tree = $this->buildTree($tree);
 
-            dump(gettype($tree));
             return view('atest.index', compact('tree')); 
         }
         
@@ -83,11 +81,9 @@ class AtestController extends Controller
         // create a collection of arrays
         // each element in the array uses the 'pef_item_id' as a key
         $groupedItems = $items->groupBy('pef_item_id');
-        dump(gettype($groupedItems));
 
         // get root items
         $rootItems = $groupedItems->get(null);
-        dump(gettype($rootItems));
 
         // ensure $rootItens is not null
         $rootItems = $rootItems ?: collect([]);
