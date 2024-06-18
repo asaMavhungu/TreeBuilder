@@ -72,7 +72,13 @@ class AtestController extends Controller
 
     private function buildTree($items)
     {
-        $grouped = $items->groupBy('pef_item_id');
+        // create a collection of arrays
+        // each element in the array uses the 'pef_item_id' as a key
+        $groupedItems = $items->groupBy('pef_item_id');
+
+        // get root items
+        $rootItems = $groupedItems->get(null);
+
         /**
          * iterates through each item in the $items collection.
          * checks if there are items ($grouped->has($item->id)) that have 
@@ -81,13 +87,14 @@ class AtestController extends Controller
          */
         foreach ($items as $item) 
         {
-            if ($grouped->has($item->id))
+            // chech if the collection has a subarray associated with 
+            // this items id
+            if ($groupedItems->has($item->id))
             {
-
-                $item->children = $grouped->get($item->id);
+                $item->children = $groupedItems->get($item->id);
             }
         }
         // Return the Root items
-        return $grouped->get(null);
+        return $rootItems;
     }
 }
