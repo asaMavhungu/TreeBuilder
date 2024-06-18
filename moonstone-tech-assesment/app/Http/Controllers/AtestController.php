@@ -39,7 +39,8 @@ class AtestController extends Controller
         {
             $currentItem = $item;
 
-            $tree->push($currentItem);
+            if (!$visitetedItems->contains($item->id))
+                $tree->push($currentItem);
 
 
             while ($currentItem)
