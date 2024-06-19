@@ -1,5 +1,9 @@
-# moonstone-tech-assesment
-moonstone tech assesment
+# Project Documentation
+
+## Overview
+This Laravel project is designed to display a heirarchical tree structure of items. Include search functionality to filter out items and display searched items along with their ancestors in a tree format
+
+## Table of content
 
 - [Installation](#Instsallation)
 - [Routes](#Routes)
@@ -18,8 +22,8 @@ moonstone tech assesment
 
 1. **Clone the repository**
 ``` bash
-    git clone https://github.com/asaMavhungu/moonstone-tech-assesment
-    cd moonstone-tech-assesment/moonstone-tech-assesment
+    git clone https://github.com/asaMavhungu/TreeBuilder
+    cd TreeBuilder/moonstone-tech-assesment
 ```
 
 2. **Install dependencies**
